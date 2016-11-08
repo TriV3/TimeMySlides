@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
 using Utilities;
+using System.IO;
 
 namespace TimeMySlides
 {
@@ -13,9 +14,11 @@ namespace TimeMySlides
     {
         globalKeyboardHook gkh;
         Stopwatch stopwatch = new Stopwatch();
+        TimeSpan offset;
 
         bool isRunning = false;
         List<SubTitle> subTitles = new List<SubTitle>();
+        string StartTime = "";
 
         public Form1()
         {
@@ -44,8 +47,7 @@ namespace TimeMySlides
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            TimeSpan ts = stopwatch.Elapsed;
-            //String ElapsedTime = String.Format("{:hh\\:mm\\:ss}", stopwatch.Elapsed);
+            TimeSpan ts = stopwatch.Elapsed + offset.Duration();
             String ElapsedTime = String.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
             lblTime.Text = ElapsedTime;
 
@@ -86,7 +88,7 @@ namespace TimeMySlides
             else
             {
                 stopwatch.Reset();
-                TimeSpan ts = stopwatch.Elapsed;
+                TimeSpan ts = stopwatch.Elapsed + offset.Duration();
                 String ElapsedTime = String.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
                 lblTime.Text = ElapsedTime;
             }
@@ -100,14 +102,29 @@ namespace TimeMySlides
         {
             gkh = new globalKeyboardHook();
 
-            XmlSerializer serializer = new XmlSerializer(typeof(List<SubTitle>), new XmlRootAttribute("SubTitles"));
-            XmlReader reader = XmlReader.Create("TimeMySlides.xml");
-            subTitles = (List<SubTitle>)serializer.Deserialize(reader);
-            System.Diagnostics.Debug.WriteLine("Xml file loaded");
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load("TimeMySlides.xml");
+            string xmlText = xmlDoc.OuterXml;
+
+            XmlSerializer serializer = new XmlSerializer(typeof(Options));
+            using (var reader = new StringReader(xmlText))
+            {
+                var options = (Options)serializer.Deserialize(reader);
+
+                this.subTitles = options.subTitles;
+                this.StartTime = options.StartTime;
+                this.offset = TimeSpan.Parse(StartTime);
+                TimeSpan ts = offset.Duration();
+                String ElapsedTime = String.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
+                lblTime.Text = ElapsedTime;
+            }
+            
+
 
             gkh.HookedKeys.Add(Keys.B);
             gkh.KeyDown += new KeyEventHandler(gkh_KeyDown);
         }
+
 
         void gkh_KeyDown(object sender, KeyEventArgs e)
         {

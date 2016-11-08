@@ -48,7 +48,7 @@
             this.lblTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblTime.Name = "lblTime";
             this.tableLayoutPanel1.SetRowSpan(this.lblTime, 5);
-            this.lblTime.Size = new System.Drawing.Size(1878, 500);
+            this.lblTime.Size = new System.Drawing.Size(1252, 325);
             this.lblTime.TabIndex = 0;
             this.lblTime.Text = "00:00:00";
             this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -63,9 +63,10 @@
             this.tableLayoutPanel1.SetColumnSpan(this.btnStart, 3);
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.ForeColor = System.Drawing.Color.Black;
-            this.btnStart.Location = new System.Drawing.Point(377, 903);
+            this.btnStart.Location = new System.Drawing.Point(252, 587);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(555, 98);
+            this.btnStart.Size = new System.Drawing.Size(371, 64);
             this.btnStart.TabIndex = 1;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = false;
@@ -81,9 +82,10 @@
             this.tableLayoutPanel1.SetColumnSpan(this.btnReset, 3);
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.Color.Black;
-            this.btnReset.Location = new System.Drawing.Point(938, 903);
+            this.btnReset.Location = new System.Drawing.Point(627, 587);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(555, 98);
+            this.btnReset.Size = new System.Drawing.Size(371, 64);
             this.btnReset.TabIndex = 1;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
@@ -100,11 +102,11 @@
             this.tableLayoutPanel1.SetColumnSpan(this.lblSubTitle, 10);
             this.lblSubTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSubTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubTitle.Location = new System.Drawing.Point(0, 500);
+            this.lblSubTitle.Location = new System.Drawing.Point(0, 325);
             this.lblSubTitle.Margin = new System.Windows.Forms.Padding(0);
             this.lblSubTitle.Name = "lblSubTitle";
             this.tableLayoutPanel1.SetRowSpan(this.lblSubTitle, 4);
-            this.lblSubTitle.Size = new System.Drawing.Size(1878, 400);
+            this.lblSubTitle.Size = new System.Drawing.Size(1252, 260);
             this.lblSubTitle.TabIndex = 2;
             this.lblSubTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -130,6 +132,7 @@
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 200F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -142,28 +145,30 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1878, 1004);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1252, 653);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1878, 1004);
+            this.ClientSize = new System.Drawing.Size(1252, 653);
             this.Controls.Add(this.tableLayoutPanel1);
             this.ForeColor = System.Drawing.Color.White;
-            this.MinimumSize = new System.Drawing.Size(1400, 800);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(939, 533);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "TimeMySlides";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

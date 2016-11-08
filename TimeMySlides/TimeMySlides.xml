@@ -1,30 +1,34 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<SubTitles>
-  <!--
-    Color = red|orange|yellow|blue|white(default)
-  -->
-  <SubTitle>
-    <Time>00:00:02</Time>
-    <Text>2 secondes</Text>
-    <Color>red</Color>
-  </SubTitle>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Options>
+  <StartTime>00:00:10</StartTime>
+  <SubTitles>
+    <!--
+      Color = red|orange|yellow|blue|white(default)
+    -->
+    <SubTitle>
+      <Time>00:00:02</Time>
+      <Text>2 secondes</Text>
+      <Color>red</Color>
+    </SubTitle>
 
-  <SubTitle>
-    <Time>00:00:05</Time>
-    <Text></Text>
-    <Color>yellow</Color>
-  </SubTitle>
+    <SubTitle>
+      <Time>00:00:05</Time>
+      <Text></Text>
+      <Color>yellow</Color>
+    </SubTitle>
 
-  <SubTitle>
-    <Time>00:00:10</Time>
-    <Text>10 secondes</Text>
-    <Color>orange</Color>
-  </SubTitle>
+    <SubTitle>
+      <Time>00:00:10</Time>
+      <Text>10 secondes</Text>
+      <Color>orange</Color>
+    </SubTitle>
 
-  <SubTitle>
-    <Time>00:00:13</Time>
-    <Text>Ce texte sera bien plus long que le précédent et sera affiché sur combien de lignes?</Text>
-    <Color>blue</Color>
-  </SubTitle>
+    <SubTitle>
+      <Time>00:00:13</Time>
+      <Text>Ce texte sera bien plus long que le précédent et sera affiché sur combien de lignes?</Text>
+      <Color>blue</Color>
+    </SubTitle>
 
-</SubTitles>
+  </SubTitles>
+  
+</Options>
