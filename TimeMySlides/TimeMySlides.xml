@@ -1,34 +1,51 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+
 <Options>
-  <StartTime>00:00:10</StartTime>
+  
+  <!--Window start Size (min size: 950x550) -->
+  <ScreenXSize>1200</ScreenXSize>
+  <ScreenYSize>600</ScreenYSize>
+ 
+  
+  <!--Start time offset (usefull to start at an arbitrary time)-->
+  <StartTime>00:00:18</StartTime>
+  
+  <!--List of subtitles-->
   <SubTitles>
-    <!--
-      Color = red|orange|yellow|blue|white(default)
-    -->
+    
     <SubTitle>
-      <Time>00:00:02</Time>
-      <Text>2 secondes</Text>
-      <Color>red</Color>
+      <!--Time for displaying text-->
+      <Time>00:00:00</Time>
+      <!--Text to display (can be on multiple lines and depends on window size)-->
+      <Text>First white time at time 00:00:00 
+      Red warning at 00:00:10</Text>
+      <!-- Time color = red|orange|yellow|blue|white(default) -->
+      <Color>white</Color>
+
+      <!-- Warning is optionnal  -->
+      <!--Warn user before next subtitle-->
+      <!--The following exemple set the text in red color 10s before the next subtitle-->
+      <WarningTime>00:00:10</WarningTime>
+      <WarningColor>red</WarningColor>
     </SubTitle>
 
     <SubTitle>
-      <Time>00:00:05</Time>
-      <Text></Text>
+      <Time>00:00:20</Time>
+      <Text>Yellow time at 00:00:20 
+      Blue warning at 00:00:25</Text>
       <Color>yellow</Color>
+
+      <!-- Optionnal   -->
+      <WarningTime>00:00:05</WarningTime>
+      <WarningColor>blue</WarningColor>
     </SubTitle>
 
     <SubTitle>
-      <Time>00:00:10</Time>
-      <Text>10 secondes</Text>
+      <Time>00:00:30</Time>
+      <Text>Orange text at 00:00:30</Text>
       <Color>orange</Color>
     </SubTitle>
 
-    <SubTitle>
-      <Time>00:00:13</Time>
-      <Text>Ce texte sera bien plus long que le précédent et sera affiché sur combien de lignes?</Text>
-      <Color>blue</Color>
-    </SubTitle>
-
   </SubTitles>
-  
+
 </Options>
