@@ -1,5 +1,6 @@
 # TimeMySlides
 
+[![GitHub release](https://img.shields.io/github/release/TristanVeyet/TimeMySlides.svg?label=version&colorA=707070&style=plastic)]()
 
 **TimeMySlides** (or **TMS**) is a C# application that help you for your public presentations.
 
