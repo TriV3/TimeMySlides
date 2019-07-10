@@ -23,9 +23,9 @@
 >Open sln file with visual studio 2015 (I use community edition).
 Build solution and get binaries in the \TimeMySlides\bin\Debug folder.
 
-##Use
+## Use
 
-###Edit TimeMySlides.xml
+### Edit TimeMySlides.xml
 
 Set the Window start size (min size: 950x550):
 
